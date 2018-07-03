@@ -10,6 +10,11 @@ export default {
       nextId: 'animalQuestion'
     }]
   },
+  responsablyAnswer: {
+    type: 'ANSWER',
+    title: 'Responsably',
+    description: 'South African Hop Exclusive for Clint. Meaty tropical festival, with hints of Blueberry, goosebury, melon , guava orange and plum. Offspring of the popular Bitter Boer and Zulu Tropic from last years festival in Watford.'
+  },
   mantaRayAnswer: {
     type: 'ANSWER',
     title: 'Manta Ray (4.6%)',
