@@ -51,16 +51,17 @@ class App extends Component {
   }
 
   onAnswerClick(id) {
+    const currentView = this.state.currentView;
     this.setState({
       currentView: this.state.beercider[id],
-      backLink: id
+      backLinkView: currentView
     })
   }
 
   onBackClick() {
     this.setState({
-      currentView: this.state.beercider[this.state.backLink],
-      backLink: false
+      currentView: this.state.backLinkView, 
+      backLinkView: false
     })
   }
 
