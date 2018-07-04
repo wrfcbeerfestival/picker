@@ -177,7 +177,7 @@ export default {
   },
   whatDidYouThinkAboutTheRecentHeatwaveQuestion: {
     type: 'QUESTION',
-    title: 'What did you think about the recent heatwave',
+    title: 'What did you think about the recent heatwave?',
     answers: [{
       title: 'Loved every minute',
       nextId: 'infernoAnswer'

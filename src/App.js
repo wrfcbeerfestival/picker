@@ -96,9 +96,11 @@ class App extends Component {
         </a>
         {this.state.currentView.type === 'QUESTION' && <Question question={this.state.currentView} answerQuestion={this.onAnswerClick} />}
         {this.state.currentView.type === 'ANSWER' && <Answer answer={this.state.currentView} />}
-        {this.state.backLinkHistory.length > 0 && <div className="App__back" onClick={() => { this.onBackClick() }}><button className="App__button">BACK</button></div>}
-        { this.state.currentView.type === 'ANSWER' && <div className="App__back" >OR</div>}
-        { this.state.currentView.type === 'ANSWER' && <div className="App__back" onClick={() => { this.onStartAgain() }}><button className="App__button">START AGAIN</button></div>}
+        {this.state.backLinkHistory.length > 0 ? <div> 
+          <div className="App__back" onClick={() => { this.onBackClick() }}><button className="App__button">BACK</button></div>
+          <div className="App__back" >OR</div>
+          <div className="App__back" onClick={() => { this.onStartAgain() }}><button className="App__button">START AGAIN</button></div>
+        </div> : null }
       </div>
     );
   }
