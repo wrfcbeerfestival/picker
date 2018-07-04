@@ -51,16 +51,22 @@ class App extends Component {
   }
 
   onAnswerClick(id) {
+    gtag('event', 'answer_click', {
+      'value': id
+    });
     window.dataLayer.push({'event': 'answer_click', 'next_page_id': id, 'current_title': this.state.currentView.title });
     const currentView = this.state.currentView;
     this.setState({
       currentView: this.state.beercider[id],
       backLinkView: currentView
     })
+    gtag('event', 'page_view', {
+      'value': this.state.beercider[id].title
+    });
   }
 
   onBackClick() {
-    window.dataLayer.push({'event': 'back_click'});
+    gtag('event', 'back_click', { 'value': this.currentView.title });
     this.setState({
       currentView: this.state.backLinkView,
       backLinkView: false
