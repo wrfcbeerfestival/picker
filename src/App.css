@@ -38,5 +38,12 @@ body {
 }
 
 .App__back {
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.App__button {
+  background-color: lightskyblue;
+  margin: 0 auto;
+  font-size: 16px;
+  height: 44px;
 }

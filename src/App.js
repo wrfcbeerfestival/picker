@@ -49,6 +49,7 @@ class App extends Component {
     }
     this.onAnswerClick = this.onAnswerClick.bind(this);
     this.onBackClick = this.onBackClick.bind(this);
+    this.onStartAgain = this.onStartAgain.bind(this);
   }
 
   onAnswerClick(id) {
@@ -78,6 +79,14 @@ class App extends Component {
     })
   }
 
+  onStartAgain() {
+    window.gtag('event', 'start_again_click');
+    this.setState({
+      currentView: firstPageState,
+      backLinkHistory: []
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -87,7 +96,9 @@ class App extends Component {
         </a>
         {this.state.currentView.type === 'QUESTION' && <Question question={this.state.currentView} answerQuestion={this.onAnswerClick} />}
         {this.state.currentView.type === 'ANSWER' && <Answer answer={this.state.currentView} />}
-        {this.state.backLinkHistory.length > 0 && <div className="App__back" onClick={() => { this.onBackClick() }}>BACK</div>}
+        {this.state.backLinkHistory.length > 0 && <div className="App__back" onClick={() => { this.onBackClick() }}><button className="App__button">BACK</button></div>}
+        { this.state.currentView.type === 'ANSWER' && <div className="App__back" >OR</div>}
+        { this.state.currentView.type === 'ANSWER' && <div className="App__back" onClick={() => { this.onStartAgain() }}><button className="App__button">START AGAIN</button></div>}
       </div>
     );
   }
