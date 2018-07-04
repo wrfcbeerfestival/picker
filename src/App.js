@@ -52,7 +52,8 @@ class App extends Component {
 
   onAnswerClick(id) {
     window.gtag('event', 'answer_click', {
-      'value': id
+      'event_category': 'answer',
+      'event_label': id
     });
     window.dataLayer.push({'event': 'answer_click', 'next_page_id': id, 'current_title': this.state.currentView.title });
     const currentView = this.state.currentView;
@@ -61,12 +62,13 @@ class App extends Component {
       backLinkView: currentView
     })
     window.gtag('event', 'page_view', {
-      'value': this.state.beercider[id].title
+      'event_category': this.state.beercider[id].type,
+      'event_label': this.state.beercider[id].title
     });
   }
 
   onBackClick() {
-    window.gtag('event', 'back_click', { 'value': this.currentView.title });
+    window.gtag('event', 'back_click', { 'event_category': 'back', 'event_label': this.state.currentView.title });
     this.setState({
       currentView: this.state.backLinkView,
       backLinkView: false
