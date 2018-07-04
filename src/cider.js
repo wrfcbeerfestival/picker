@@ -110,7 +110,7 @@ export default {
       title: 'I like to push the boat out a bit',
       nextId: 'rhubarbAnswer'
     }, {
-      title: 'I don\'t even look at the menu, I just have the special',
+      title: 'I don\'t even look at the menu',
       nextId: 'somethingFruitySpecial'
     }]
   },
