@@ -60,7 +60,7 @@ class App extends Component {
 
   onBackClick() {
     this.setState({
-      currentView: this.state.backLinkView, 
+      currentView: this.state.backLinkView,
       backLinkView: false
     })
   }
@@ -68,6 +68,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <a className="App__banner" rel="preconnect" href="http://watfordrfcbeerfestival.co.uk/">
+          <div>WRFC Beer Festival 12th - 15th July</div>
+          <div>Click for more information</div>
+        </a>
         {this.state.currentView.type === 'QUESTION' && <Question question={this.state.currentView} answerQuestion={this.onAnswerClick} />}
         {this.state.currentView.type === 'ANSWER' && <Answer answer={this.state.currentView} onBackClick={this.onBackClick} />}
       </div>
