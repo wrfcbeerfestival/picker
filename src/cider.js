@@ -38,7 +38,7 @@ export default {
   strawberryAnswer: {
     type: 'ANSWER',
     title: 'Strawberry (6.5%)',
-    description: 'Medium to sweet cider made by blendings our Original Scrumpy with a dash of sweet strawberry juice creating an easy drinking fruit cider with a hint of strawberry on the finish.'
+    description: 'Medium to sweet cider made by blending our Original Scrumpy with a dash of sweet strawberry juice creating an easy drinking fruit cider with a hint of strawberry on the finish.'
   },
   somerGoldAnswer: {
     type: 'ANSWER',
@@ -68,7 +68,7 @@ export default {
   mangoAndLime: {
     type: 'ANSWER',
     title: 'Flash Harry\'s (4.0%)',
-    description: 'Mango and Lime is perfect on a hot summers day. This cider will move as fast as flash himself.'
+    description: 'Mango and Lime is perfect on a hot summer\'s day. This cider will move as fast as flash himself.'
   },
   cherryAndPineapple: {
     type: 'ANSWER',
@@ -77,7 +77,7 @@ export default {
   },
   royalQuestion: {
     type: 'QUESTION',
-    title: 'How royal are you feeling',
+    title: 'How royal are you feeling?',
     answers: [{
       title: 'I\'m basically the Queen',
       nextId: 'princeHarryAnswer'
@@ -88,7 +88,7 @@ export default {
   },
   awesomeCiderName: {
     type: 'QUESTION',
-    title: 'Do you pick drinks based on their name',
+    title: 'Do you pick drinks based on their name?',
     answers: [{
       title: 'Yes, it\'s like the first thing I do',
       nextId: 'thunderingMollyAnswer'
@@ -102,7 +102,7 @@ export default {
   },
   standardOrDifferent: {
     type: 'QUESTION',
-    title: 'If you go to a resturant. What do you pick?',
+    title: 'If you go to a restaurant, what do you pick?',
     answers: [{
       title: 'My classic dish. Nice and safe',
       nextId: 'somethingFruityClassic'
@@ -124,10 +124,10 @@ export default {
       title: 'Apple',
       nextId: 'somerGoldAnswer'
     }, {
-      title: 'Apple and Pears',
+      title: 'Apple and Pear',
       nextId: 'appleAndPearsAnswer'
     }, {
-      title: 'Anything with a bit of wine in it?',
+      title: 'Anything with a bit of wine in it',
       nextId: 'riojaAnswer'
     }]
   },

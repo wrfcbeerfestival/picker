@@ -1,7 +1,7 @@
 export default {
   beerStart: {
     type: 'QUESTION',
-    title: 'Something Exclusive for our event?',
+    title: 'Something Exclusive to our event?',
     answers: [{
       title: 'Yes',
       nextId: 'responsablyAnswer'
@@ -13,37 +13,37 @@ export default {
   responsablyAnswer: {
     type: 'ANSWER',
     title: 'Responsably',
-    description: 'South African Hop Exclusive for Clint. Meaty tropical festival, with hints of Blueberry, goosebury, melon , guava orange and plum. Offspring of the popular Bitter Boer and Zulu Tropic from last years festival in Watford.'
+    description: 'South African Hop Exclusive for Clint. Meaty tropical festival, with hints of Blueberry, goosebury, melon, guava, orange and plum. Offspring of the popular Bitter Boer and Zulu Tropic from last year\'s festival in Watford.'
   },
   mantaRayAnswer: {
     type: 'ANSWER',
     title: 'Manta Ray (4.6%)',
-    description: 'Brewed with pilsner malts this crisp craft lager is tripple hopped with kasbek, chinnook makatu. Glides down the throat far too easily.'
+    description: 'Brewed with pilsner malts this crisp craft lager is triple hopped with kasbek, chinnook and makatu. Glides down the throat far too easily.'
   },
   alligatorAnswer: {
     type: 'ANSWER',
     title: 'Alligator (4.6%)',
-    description: 'Brewed with all pale malts and loaded with our brewers’ favourite hop, Azacca.  Hitting you straight off with the tastes of mangos, lychees, citrus and pine, with a clean crisp malt bill lurking in the background.  So full of tropical flavours you’ll think you really are in the tropics'
+    description: 'Brewed with all pale malts and loaded with our brewer\'s favourite hop, Azacca.  Hitting you straight off with the tastes of mangos, lychees, citrus and pine, with a clean crisp malt bill lurking in the background. So full of tropical flavours you’ll think you really are in the tropics.'
   },
   newtonAnswer: {
     type: 'ANSWER',
     title: 'Sir Newton (3.8%)',
-    description: 'A classic Golden Ale brewed as a hydbrid craft tradtional bitter. A calculated blend of Maris Otter and Crystal malts; balanced by whole leaf Challenger, Target, Celeia and Cascade. An Ale crafted with detail down to the last molecule. Our Golden Ale is adjusted to perfection and inspired by the man who understood the variables of balance best, Sir Newton. A man who himself has confessed, was inspired the great Watling Street to begin with.'
+    description: 'A classic Golden Ale brewed as a hybrid, craft, traditional bitter. A calculated blend of Maris Otter and Crystal malts; balanced by whole leaf Challenger, Target, Celeia and Cascade. An Ale crafted with detail down to the last molecule. Our Golden Ale is adjusted to perfection and inspired by the man who understood the variables of balance best, Sir Newton. A man who himself has confessed, was inspired the great Watling Street to begin with.'
   },
   shellyAnswer: {
     type: 'ANSWER',
     title: 'Miss Shelly (4.2%)',
-    description: 'A refreshing Pale Ale brewed straight up with Maris Otter barley. This heavily hopped whole leaf Galena, Cascade and Liberty Hop is an exciting creation. Some say it’s a creation so bold and unapologetic that it acts as an ode to Mary Shelley. That it’s a companion complex enough that she could finally find a form of solace.'
+    description: 'A refreshing Pale Ale brewed straight up with Maris Otter barley. This heavily hopped whole leaf Galena, Cascade and Liberty Hop is an exciting creation. Some say it\’s a creation so bold and unapologetic that it acts as an ode to Mary Shelley. That it\’s a companion complex enough that she could finally find a form of solace.'
   },
   mrRipperAnswer: {
     type: 'ANSWER',
     title: 'Mr Ripper (4.5%)',
-    description: 'A heavily hopped blood Red Ale, with colours pulling through from Crystal Rye. An Ale with rich notes of whole leaf First Gold, Admiral, Pilot and Savinski Golding. This Ale had enough heart even for MR Ripper, the shadow of these parts. Watling Street Red Ale, the infamous ale for the infamous character.'
+    description: 'A heavily hopped blood Red Ale, with colours pulling through from Crystal Rye. An Ale with rich notes of whole leaf First Gold, Admiral, Pilot and Savinski Golding. This Ale has enough heart even for MR Ripper, the shadow of these parts. Watling Street Red Ale, the infamous ale for the infamous character.'
   },
   uncleDamnAnswer: {
     type: 'ANSWER',
     title: 'Uncle Damn (3.7%)',
-    description: 'This Session Pale is bursting with tropical grapefuit and citrus flavours.Packed with Liberty, Mosaic and citra hops'
+    description: 'This Session Pale is bursting with tropical grapefruit and citrus flavours. Packed with Liberty, Mosaic and citra hops.'
   },
   boudiccaAnswer: {
     type: 'ANSWER',
@@ -53,12 +53,12 @@ export default {
   watTylerAnswer: {
     type: 'ANSWER',
     title: 'Wat Tyler (4.8%)',
-    description: 'Cascade and mosaic hops define this citrus punchy pale. "Wat ch" out though it drinks like juice.'
+    description: 'Cascade and mosaic hops define this citrus punchy pale. "Watch" out though it drinks like juice.'
   },
   infernoAnswer: {
     type: 'ANSWER',
     title: 'Inferno (4.0%)',
-    description: 'With Sterling, Amarillo, Centennial,Cascade, Chinook hops. A light golden beer with a big personality, bursting with fruity hop flavours, citrus notes and a refreshing finish.'
+    description: 'With Sterling, Amarillo, Centennial, Cascade, Chinook hops. A light golden beer with a big personality, bursting with fruity hop flavours, citrus notes and a refreshing finish.'
   },
   fireflyAnswer: {
     type: 'ANSWER',
@@ -83,12 +83,12 @@ export default {
   wolfAnswer: {
     type: 'ANSWER',
     title: 'Wolf (3.8%)',
-    description: 'A Straw coloured pale that showcases one of the most exciting and recent Slovenian hops on the market Styrian Wolf. Expect intense flavours of citrus and berries and a smooth bitterness.'
+    description: 'A Straw coloured pale that showcases one of the most exciting and recent Slovenian hops on the market; Styrian Wolf. Expect intense flavours of citrus and berries and a smooth bitterness.'
   },
   threeHogsAnswer: {
     type: 'ANSWER',
     title: 'Three Hogs (4.0%)',
-    description: 'Refreshingly hoppy This seasonal beer isn\'t even on the website. It comes with a little bitterness crossed with hint sweetness. A session beer in anyones book.'
+    description: 'Refreshingly hoppy this seasonal beer isn\'t even on the website. It comes with a little bitterness crossed with hint sweetness. A session beer in anyones book.'
   },
   blackListedAnswer: {
     type: 'ANSWER',
@@ -99,10 +99,10 @@ export default {
     type: 'QUESTION',
     title: 'The time old question, Manta Ray v Alligator. You decide!',
     answers: [{
-      title: 'Manta Ray\'s for the win',
+      title: 'Manta Rays for the win',
       nextId: 'mantaRayAnswer'
     }, {
-      title: 'Alligator\'s all day long',
+      title: 'Alligators all day long',
       nextId: 'alligatorAnswer'
     }, {
       title: 'They both suck!',

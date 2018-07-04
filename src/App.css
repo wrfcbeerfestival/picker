@@ -36,3 +36,7 @@ body {
   display: block;
   text-decoration: none;
 }
+
+.App__back {
+  margin-top: 10px;
+}

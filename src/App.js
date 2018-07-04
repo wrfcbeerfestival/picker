@@ -20,31 +20,32 @@ const Answer = ({ answer, onBackClick }) => {
     <div>
       <h2 className="App__title--underline">{answer.title}</h2>
       <p className="App__description">{answer.description}</p>
-      <div onClick={() => { onBackClick() }}>BACK</div>
     </div>
   )
 }
 
+const firstPageState = {
+  type: 'QUESTION',
+  title: 'Which would you prefer?',
+  answers: [{
+    title: 'Beer',
+    nextId: 'beerStart'
+  }, {
+    title: 'Cider',
+    nextId: 'ciderStart'
+  }]
+}
 class App extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      currentView: {
-        type: 'QUESTION',
-        title: 'Which would you prefer?',
-        answers: [{
-          title: 'Beer',
-          nextId: 'beerStart'
-        }, {
-          title: 'Cider',
-          nextId: 'ciderStart'
-        }]
-      },
+      currentView: firstPageState,
       beercider: {
         ...cider,
         ...beer
-      }
+      },
+      backLinkHistory: []
     }
     this.onAnswerClick = this.onAnswerClick.bind(this);
     this.onBackClick = this.onBackClick.bind(this);
@@ -55,13 +56,12 @@ class App extends Component {
       'event_category': 'answer',
       'event_label': id
     });
-    window.dataLayer.push({'event': 'answer_click', 'next_page_id': id, 'current_title': this.state.currentView.title });
-    const currentView = this.state.currentView;
+    window.dataLayer.push({ 'event': 'answer_click', 'next_page_id': id, 'current_title': this.state.currentView.title });
     this.setState({
       currentView: this.state.beercider[id],
-      backLinkView: currentView
+      backLinkHistory: [...this.state.backLinkHistory, id]
     })
-    window.gtag('event', 'page_view', {
+    window.gtag('event', 'page_title', {
       'event_category': this.state.beercider[id].type,
       'event_label': this.state.beercider[id].title
     });
@@ -69,21 +69,25 @@ class App extends Component {
 
   onBackClick() {
     window.gtag('event', 'back_click', { 'event_category': 'back', 'event_label': this.state.currentView.title });
+    const backLinkHistoryClone = [...this.state.backLinkHistory];
+    backLinkHistoryClone.pop();
+    const lastId = backLinkHistoryClone[backLinkHistoryClone.length - 1];
     this.setState({
-      currentView: this.state.backLinkView,
-      backLinkView: false
+      currentView: lastId ? this.state.beercider[lastId] : firstPageState,
+      backLinkHistory: backLinkHistoryClone
     })
   }
 
   render() {
     return (
       <div className="App">
-        <a className="App__banner" rel="preconnect" href="http://watfordrfcbeerfestival.co.uk/">
+        <a className="App__banner" rel="preconnect" onClick={() => { window.gtag('event', 'visit_main_site') }} href="http://watfordrfcbeerfestival.co.uk/">
           <div>WRFC Beer Festival 12th - 15th July</div>
           <div>Click for more information</div>
         </a>
         {this.state.currentView.type === 'QUESTION' && <Question question={this.state.currentView} answerQuestion={this.onAnswerClick} />}
-        {this.state.currentView.type === 'ANSWER' && <Answer answer={this.state.currentView} onBackClick={this.onBackClick} />}
+        {this.state.currentView.type === 'ANSWER' && <Answer answer={this.state.currentView} />}
+        {this.state.backLinkHistory.length > 0 && <div className="App__back" onClick={() => { this.onBackClick() }}>BACK</div>}
       </div>
     );
   }
