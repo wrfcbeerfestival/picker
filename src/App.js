@@ -51,6 +51,7 @@ class App extends Component {
   }
 
   onAnswerClick(id) {
+    window.dataLayer.push({'event': 'answer_click', 'next_page_id': id, 'current_title': this.state.currentView.title });
     const currentView = this.state.currentView;
     this.setState({
       currentView: this.state.beercider[id],
@@ -59,6 +60,7 @@ class App extends Component {
   }
 
   onBackClick() {
+    window.dataLayer.push({'event': 'back_click'});
     this.setState({
       currentView: this.state.backLinkView,
       backLinkView: false
